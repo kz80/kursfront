@@ -5,59 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-
-
-
-
-
 <body>
- <header>
+ <header class="bodyHeader">
     <h1>Portfolio <br/>
         Katarzyna Zielińska
     </h1>
+
+    <!--GŁÓWNA NAWIGACJA--> 
+    <nav>
+        <!-- ORDERED LIST - LISTA NUMEROWANA--> 
+        <!-- LIST ITEM - ELEMENTY LISTY -->
+        <!-- <ol>
+            <li>list item1 </li>
+            <li>list item2 </li>
+            <li>list item3 </li>
+        </ol> -->
+    
+        <!-- UNORDERED LIST - LISTA NIENUMEROWANA -->
+        <ul>
+            <li>O MNIE</li>
+            <li>UMIEJĘTNOŚCI</li>
+            <li>KONTAKT</li>
+        </ul>
+    
+    </nav>
 </header> 
 
-<nav>
-    <!-- ORDERED LIST - LISTA NUMEROWANA--> 
-    <!-- LIST ITEM - ELEMENTY LISTY -->
-    <!-- <ol>
-        <li>list item1 </li>
-        <li>list item2 </li>
-        <li>list item3 </li>
-    </ol> -->
-
-    <!-- UNORDERED LIST - LISTA NIENUMEROWANA -->
-    <ul>
-        <li>O MNIE</li>
-        <li>PROJEKTY</li>
-        <li>KONTAKT</li>
-    </ul>
-
-</nav>
-
-
-<main>
+ <main class="wraperr">
     <header>
         <h2>O MNIE</h2>
     </header>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThdSvx_f-_jIa6yArUBHHHSMI18cB8J2Yp0Q&usqp=CAU" alt="PERSONAL IMAGE"/>
 </main>
 
-    <article>
-        <header>
-            Nagłówek autonomicznej części strony </header>
-            <header>
-                <h2>UMIEJĘTNOŚCI</h2>
+    <article class="wraperr"> 
+         <header>
+            <h2>UMIEJĘTNOŚCI</h2>
             </header>
-
-        <table border="10">
+        <!--im większy border tym grubsza tabelka-->
+        <table border="3">
             <!-- nagłówek tabeli -->
             <thead>
                 <!-- wiersz nagłówkowy-->
                 <tr>
-                    <!-- komórka nagłówkowa-->
+                    <!-- TABLE HEADING komórka nagłówkowa-->
                     <th>LP. </th>
                     <th>TECHNOLOGIE </th>
                     <th>BIEGŁOŚĆ </th>
@@ -82,14 +76,11 @@
 
             </tbody>
         </table>
-         
-            
+                    
     </article>
 
 
-
-    <section>
-        Tematycznie zgrupowany kontent
+    <section class="wraperr">  
         <header>
             <h2>KONTAKT</h2>
         </header>
@@ -100,11 +91,9 @@
             <textarea cols="21" rows="5"></textarea>
             <input type="submit" value="WYŚLIJ">
         </form>
-        
-    </section>
 
-   
-    
+    </section>
+ 
     <footer>
         Stopka 
     </footer>
