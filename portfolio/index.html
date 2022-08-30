@@ -6,23 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
+
+
+
+
+
 <body>
  <header>
-    NAGŁÓWEK
+    <h1>Portfolio <br/>
+        Katarzyna Zielińska
+    </h1>
 </header> 
+
 <nav>
-    Nawigacja strony
+    <!-- ORDERED LIST - LISTA NUMEROWANA--> 
+    <!-- LIST ITEM - ELEMENTY LISTY -->
+    <!-- <ol>
+        <li>list item1 </li>
+        <li>list item2 </li>
+        <li>list item3 </li>
+    </ol> -->
+
+    <!-- UNORDERED LIST - LISTA NIENUMEROWANA -->
+    <ul>
+        <li>O MNIE</li>
+        <li>PROJEKTY</li>
+        <li>KONTAKT</li>
+    </ul>
+
 </nav>
+
+
 <main>
-    content
+    <header>
+        <h2>O MNIE</h2>
+    </header>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThdSvx_f-_jIa6yArUBHHHSMI18cB8J2Yp0Q&usqp=CAU" alt="PERSONAL IMAGE"/>
 </main>
+
     <article>
         <header>
-            Nagłówek autonomicznej części strony
-
-
-
-
+            Nagłówek autonomicznej części strony </header>
+            <header>
+                <h2>UMIEJĘTNOŚCI</h2>
+            </header>
 
         <table border="10">
             <!-- nagłówek tabeli -->
@@ -30,34 +58,56 @@
                 <!-- wiersz nagłówkowy-->
                 <tr>
                     <!-- komórka nagłówkowa-->
-                    <th>Heading1 </th>
-                    <th>Heading2 </th>
-                    <th>Heading3 </th>
+                    <th>LP. </th>
+                    <th>TECHNOLOGIE </th>
+                    <th>BIEGŁOŚĆ </th>
                 </tr>
             </thead>
-<tr>
 
-    <td1>
+            <!-- Tabela właściwa (dane) -->
+            <tbody>
+            <!-- Table row (wiersz) -->
+            <tr>
+                <!-- TABLE DIVIDE (podział wiersza) -->
+                <td>1</td>
+                <td>HTML</td>
+                <td>⭐⭐⭐⭐⭐</td>
+            </tr>
 
-    </td>
-</tr>
+            <tr>
+                <td>2</td>
+                <td>CSS</td>
+                <td>⭐</td>
+            </tr>
 
-
-
-
+            </tbody>
         </table>
-
+         
             
-
-        </table>
-        </header>
     </article>
+
+
 
     <section>
         Tematycznie zgrupowany kontent
+        <header>
+            <h2>KONTAKT</h2>
+        </header>
+
+        <form>
+            <input type="email" placeholder="EMAIL">
+            <input type="text" placeholder="TYTUŁ">
+            <textarea cols="21" rows="5"></textarea>
+            <input type="submit" value="WYŚLIJ">
+        </form>
+        
     </section>
+
+   
+    
     <footer>
         Stopka 
     </footer>
+
 </body>
 </html>
