@@ -4,21 +4,28 @@
     --foreground-lighter:#cfbdff;
     --background-dark:#8F8518;
     --background-lighy: #DBD051;
+    --default-box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     
 }
 *{box-sizing: border-box;}
+html{scroll-behavior: smooth;}
 body {
     background-color: var(--background-dark);
     margin:0;
     min-height: 1000px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Secular One', sans-serif;
 }
 
 a{
     text-decoration: none;
     color: inherit;
+    display: flex;
+    align-items: center;
 }
 
+.material-symbols-outlined{
+    margin: .25rem;
+}
 
 .bodyHeader {
     background-color: var(--background-light);
@@ -29,9 +36,8 @@ a{
     position:fixed;
     width:100%;
     top: 0;
-    box-shadow: rgba(0, 0, 0, 0.09);
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-
 
 h1{
     /* jeśli podajemy 2 wartości : poz y, poz x */
@@ -65,16 +71,17 @@ label div{
     position:absolute;
     width: 80%;
     background-color: #000;
-    position: .2s;
+    position: absolute
   }
   
   label div:nth-child(1){
     top:calc( 22% - 1px);
   }
-  
+    
   label div:nth-child(2){
     top:calc( 50% - 1px);
   }
+
   label div:nth-child(3){
     top:calc( 78% - 1px);
   }
@@ -97,10 +104,10 @@ label div{
 }
 
 ul{
-    background-color: var(--foreground-light);
+    background-color: var(--background-light);
     list-style-type: none;
     margin:0;
-    padding: 0.5rem;;
+    padding: 0.5rem;
     display:flex;
     position:fixed;
     right:-100%;
@@ -130,15 +137,18 @@ li{
 }
 
 form{
-    border: 5px dashed red;
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: 1rem;
+    margin: 0 1rem;
     gap: 5px;
+    background: var(--foreground-lighter);
+    box-shadow: var(--default-box-shadow);
+    border-radius: .5rem;
 }
 
 input, textarea{
-    padding: 10px;
+    max-width: 100%;
 }
 
 img{
@@ -160,8 +170,70 @@ form{
     width: 100%;
 }
 
+.wrapper h2 {
+    margin:0;
+  }
+  .wrapper p {
+    margin:0;
+    margin-bottom:1rem;
+    line-height: 2rem;
+  }
+  
+  /* div na któym osadzamy tabelkę */
+  .tableWrapper{
+    /* dajemy padding tylko z prawej i lewej strony */
+    padding: 0 1rem;
+  }
+  
+  table{
+    /* box shadow ze strony https://getcssscan.com/css-box-shadow-examples*/
+    box-shadow: var(--default-box-shadow)
+    /* max szerokość strony */
+    width:100%;
+    /* usuwamy granice pomiędzy wierszami i kolumnami */ 
+    border-radius: .5rem;
+    /*even|odd - co drugie dziecko */
+    tr:nth-child(even){
+    }
+    background: var(--foreground-lighter);
+    box-shadow: var(--default-box-shadow);
+    
+  }
+  
+  th{
+    /* ustawiamy kolor ze zmiennych */
+    background-color: var(--foreground-dark);
+    padding:.5rem;
+  }
+  
+  td{
+    padding:.3rem;
+  }
+  
+  tr{
+    background: var(--foreground-light);
+  }
+  /* even|odd - co drugie dziecko */
+  tr:nth-child( even ){
+    background: var(--foreground-lighter);
+  }
 
-
-main header {
-    border: 5px dashed yellow;
-}
+  footer{
+    /* border:2px dashed red; */
+    margin-top:3rem;
+    background-color: #000;
+    color:rgb(255, 255, 255);
+    font-size:.8rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding:1rem;
+  }
+  footer ol{
+    list-style: none;
+    margin:0;
+    padding:0;
+  }
+  footer p {
+    margin:0;
+  }
