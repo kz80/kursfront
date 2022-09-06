@@ -1,6 +1,7 @@
 :root{
     --foreground-dark: #6a8f43;
     --foreground-light: #9C78FF;
+    --foreground-lighter:#cfbdff;
     --background-dark:#8F8518;
     --background-lighy: #DBD051;
     
@@ -24,8 +25,11 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    /*position:sticky;*/
+    position:fixed;
+    width:100%;
     top: 0;
+    box-shadow: rgba(0, 0, 0, 0.09);
 }
 
 
@@ -149,11 +153,14 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 3.5rem .5rem 0.5 rem;
 }
 
 .wraperr header{
     width: 100%;
 }
+
+
 
 main header {
     border: 5px dashed yellow;
