@@ -1,72 +1,71 @@
 @charset "UTF-8";
-:root{
-    --foreground-dark: #6a8f43;
-    --foreground-light: #9C78FF;
-    --foreground-lighter:#cfbdff;
-    --background-dark:#8F8518;
-    --background-lighy: #DBD051;
-    --default-box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    
+:root {
+  --foreground-dark:#34128F;
+  --foreground-light:#9C78FF;
+  --foreground-lighter:#cfbdff;
+  --background-dark:#8F8518;
+  --background-light:#DBD051;
+  --default-box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
-*{
+
+* {
   box-sizing: border-box;
 }
-*a{
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    align-items: center;
+* a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+* .material-symbols-outlined {
+  margin: 0.25rem;
 }
 
-*.material-symbols-outlined {
-    margin: 0.25rem;
+html {
+  scroll-behavior: smooth;
 }
 
-html{
-    scroll-behavior: smooth;
-    min-height: 1000px;
-    font-family: "Secular One", sans-serif;
-  }
-
+body {
+  background-color: var(--background-dark);
+  margin: 0;
+  min-height: 1000px;
+  font-family: "Secular One", sans-serif;
+}
 body .bodyHeader {
-    background-color: var(--background-light);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position:fixed;
-    width:100%;
-    top: 0;
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  background-color: var(--background-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-
-body .bodyHeader h1{
-    /* jeśli podajemy 2 wartości : poz y, poz x */
-    margin: 6px 10px;
-    /* clamp przyjmuje wartości - najmniejsza mozliwa czcionka (na ile najmniej moze się wyświetić, średnia i największa) */
-    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+body .bodyHeader h1 {
+  /* jeśli podajemy 2 wartości : poz y, poz x */
+  margin: 6px 10px;
+  /* clamp przyjmuje wartości - najmniejsza możliwa czionka (na ile najmniej
+  może się wyświetlić, średnia i największa) */
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
 }
-
 body .bodyHeader nav #toggler {
-    display: none;
+  display: none;
 }
-
-body .bodyHeader nav #toggler:checked ~ ul{
-    right: 0;
+body .bodyHeader nav #toggler:checked ~ ul {
+  right: 0;
 }
-
 body .bodyHeader nav #toggler:checked ~ label div:nth-child(1) {
-    transform: rotate(45deg);
-    top: calc(50%-1px);  
+  transform: rotate(45deg);
+  top: calc(50% - 1px);
 }
 body .bodyHeader nav #toggler:checked ~ label div:nth-child(2) {
-  opacity: 0; 
+  opacity: 0;
 }
 body .bodyHeader nav #toggler:checked ~ label div:nth-child(3) {
   transform: rotate(-45deg);
-  top: calc(50%-1px);  
+  top: calc(50% - 1px);
 }
-
-body .bodyHeader nav label { 
+body .bodyHeader nav label {
   width: 2rem;
   height: 2rem;
   position: absolute;
@@ -112,7 +111,7 @@ body .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3.5rem 0.5rem 0 0.5rem;
+  padding: 5rem 0.5rem 0 0.5rem;
 }
 body .wrapper header {
   width: 100%;
@@ -143,7 +142,6 @@ body .wrapper .content .tableWrapper table {
   /* usuwamy granice pomiędzy wierszami i kolumnami */
   border-collapse: collapse;
 }
-
 body .wrapper .content .tableWrapper table tr {
   background: var(--foreground-light);
   /* even|odd - co drugie dziecko */
@@ -169,18 +167,20 @@ body .wrapper .content form {
   box-shadow: var(--default-box-shadow);
   border-radius: 0.5rem;
 }
-
 body .wrapper .content form input, body .wrapper .content form textarea {
   padding: 10px;
 }
 body footer {
   /* border:2px dashed red; */
   margin-top: 3rem;
-  background-color: #000;  
+  background-color: #000;
+  color: rgb(255, 255, 255);
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
   align-items: flex-end;
   padding: 1rem;
 }
-
 body footer ol {
   list-style: none;
   margin: 0;
@@ -192,13 +192,23 @@ body footer p {
 
 /* warunek, wyłapujący wyświetlanie na komputerze */
 @media (min-width: 768px) {
-  ul {
+  body .bodyHeader nav ul {
     flex-direction: row;
     position: static;
-    background-color: transparent;
   }
-  label {
+  body .bodyHeader nav label {
     display: none;
-    display: none;
+  }
+  body .wrapper {
+    min-height: 70vh;
+    flex-direction: row;
+  }
+  body .wrapper:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+  body .wrapper > * {
+    flex: 1;
+    text-align: center;
+    padding: 3rem;
   }
 }
