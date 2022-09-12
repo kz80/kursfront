@@ -6,7 +6,7 @@ let y = 1;
 y=3
 console.log('y=',y, ',x=',x)
 
-const person ="John"
+//const person ="John"
 // console.log(personName)
 
 //OBIEKTY
