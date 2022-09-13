@@ -68,3 +68,6 @@ const views = [
   const rightArr = document.querySelector(".right")
   // po kliknięciu na strzałkę w prawo wykonaj modifyCurrentSlide z argumentem right
   rightArr.onclick = function(){ modifyCurrentSlide('right') }
+
+  const leftArr = document.querySelector(".left")
+  leftArr.onclick = function() {modifyCurrentSlide("left")}
