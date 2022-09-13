@@ -54,7 +54,7 @@ const views = [
         currentSlide--;
       }
       // sprawdź, czy numer slajdu nie jest większy niż ilość wszystkich slajdów
-      if(currentSlide >= < 0 ){
+      if(currentSlide < 0 ){
         // jeżeli jest to pokaż pierwszy slajd
         currentSlide = views.length -1
       }
