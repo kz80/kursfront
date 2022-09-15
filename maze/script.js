@@ -39,7 +39,7 @@ function makeWall(x, y, w, h, type = 'wall') {
     `
     wall.className = 'wall'
     if(type != 'wall') {
-        wall.className += ''+type;
+        wall.className += ' '+type;
     }
     
     gamePlane.append(wall)
@@ -66,7 +66,7 @@ const game = {
     buttons: {
         start: document.querySelector('.start'),
         meta: document.querySelector('.meta'),
-        walls: document.querySelector('.wall'),
+        walls: document.querySelectorAll('.wall'),
     },
 
     init(){
